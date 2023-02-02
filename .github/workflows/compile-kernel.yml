@@ -111,7 +111,7 @@ jobs:
           tag: kernel_${{ env.PACKAGED_OUTPUTTAGS }}
           artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
           allowUpdates: true
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ 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 }}
           body: |
             The kernel can be used to compile Armbian and OpenWrt.
             The kernel source code comes from: ${{ inputs.kernel_source }}
