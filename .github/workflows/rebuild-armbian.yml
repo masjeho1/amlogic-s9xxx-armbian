@@ -142,7 +142,7 @@ jobs:
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Rebuild Armbian
-        uses: ophub/amlogic-s9xxx-armbian@main
+        uses: masjeho1/amlogic-s9xxx-armbian@main
         if: ${{ env.ARMBIAN_URL }} != '' && !cancelled()
         with:
           build_target: armbian
@@ -157,7 +157,7 @@ jobs:
           gh_token: ${{ secrets.GH_TOKEN }}
 
       - name: Upload Armbian image to Release
-        uses: ncipollo/release-action@main
+        uses: masjeho1/release-action@main
         if: ${{ env.PACKAGED_STATUS }} == 'success' && !cancelled()
         with:
           tag: Armbian${{ env.ARMBIAN_RELEASE }}${{ env.PACKAGED_OUTPUTDATE }}
