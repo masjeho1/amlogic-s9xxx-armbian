@@ -153,7 +153,7 @@ jobs:
             df -hT ${PWD}
 
       - name: Upload Armbian image to Release
-        uses: ncipollo/release-action@main
+        uses: masjeho1/release-action@main
         if: ${{ steps.compile.outputs.status }} == 'success' && !cancelled()
         with:
           tag: ${{ steps.compile.outputs.build_tag }}
