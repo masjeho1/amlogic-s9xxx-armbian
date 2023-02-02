@@ -55,6 +55,8 @@ on:
         default: "5.15.85_6.1.1"
         type: choice
         options:
+          - 5.9.14
+          - 5.9.16
           - 5.4.225_5.10.160_5.15.85
           - 5.4.225_5.10.160
           - 5.10.160_5.15.85
@@ -71,7 +73,7 @@ on:
       kernel_repo:
         description: "Set the kernel repository."
         required: false
-        default: "https://github.com/ophub/kernel/tree/main/pub"
+        default: "https://github.com/masjeho1/kernel/tree/main/pub"
       armbian_size:
         description: "Set armbian rootfs size(Unit: MiB)."
         required: false
